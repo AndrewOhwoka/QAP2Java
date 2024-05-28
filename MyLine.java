@@ -96,18 +96,27 @@ public class MyLine {
         end.setY(y);
     }
 
-
-
-
-
-
-
-
-    
     //Methods
+
+    public double getLength()
+    {
+        int xDiff = this.end.getX() - this.begin.getX();
+        int yDiff = this.end.getY() - this.begin.getY();
+        return (Math.sqrt((xDiff*xDiff) + (yDiff*yDiff)));
+    }
+
+    public double getGradient()
+    {
+        int xDiff = this.end.getX() - this.begin.getX();
+        int yDiff = this.end.getY() - this.begin.getY();
+        return Math.atan2(yDiff, xDiff);
+    }
+
     public String toString()
     {
         return ("Begin: " + this.begin + " End: " + this.end);
     }
+
+
     
 }
